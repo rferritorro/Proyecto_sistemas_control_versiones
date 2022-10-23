@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        "html"
+    ],
+    "settings": {
+        "html/html-extensions": [
+            ".html"
+        ],
+	"html/indent": "tab",
+        "html/report-bad-indent": "error"
+    }
+}

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+npx eslint src/index.html
+
 branch=`git symbolic-ref --short HEAD`
 first_line=`head -n1 $1`
 user="A corregir por:usuario1"
