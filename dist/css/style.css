@@ -23,7 +23,39 @@ html {
  *
  * Customize the background color to match your design.
  */
+header {
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/back_pic/02/65/79/475788bc11dc678.jpg');
+  text-align: center;
+  padding: 1.75%;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
 
+section {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background-color: gray;
+}
+section div {
+  color: white;
+}
+section div button {
+  border: none;
+  background-color: white;
+  padding: 1.75%;
+}
+footer {
+  background-color: black;
+  color: white;
+}
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
