@@ -18,7 +18,9 @@
   },
   "scripts": {
     "build": "gulp build",
-    "test": "gulp archive && mocha --reporter spec --timeout 5000"
+    "test": "gulp archive && mocha --reporter spec --timeout 5000",
+    "prepare": "husky install",
+    "scriptname": "cmd"
   },
   "devDependencies": {
     "archiver": "^5.3.1",
@@ -64,6 +66,5 @@
     "dist/",
     "modernizr-config.json",
     "README.md"
-  ],
-  "dependencies": {}
+  ]
 }
