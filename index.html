@@ -4,9 +4,258 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Proyecto Control Versiones</title>
 </head>
 <body>
-    <h1>hola</h1>
+    <header>
+
+        <h1>Proyecto Sistema Control de Versiones</h1>
+        <h3>By Rafa Ferri</h3><h4>2 DAW</h4>
+        
+    </header>
+    <nav>
+        <ul>
+            <li>Git</li>
+            <li>Git-Flow</li>
+            <li>Proyecto</li>
+                <ul>
+                    <li>Explicación</li>
+                    <li>Usuarios</li>
+                </ul>
+            <li>Procedimiento</li>
+            <li>Inicio</li>
+            <li>Husky</li>
+            <li>Feature</li>
+            <li>Eslint</li>
+            <li>Final</li>
+        </ul>
+    </nav>
+    <section class="git">
+        <h4>Git</h4>
+        <p>
+            Es un sistema de control de versiones distribuido diseñado por Linus Torvalds .
+            Un control de versiones se define como la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración.
+            
+            Git fue creado pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente, es decir Git nos proporciona las herramientas para desarrollar un trabajo en equipo de manera inteligente y rápida y por trabajo nos referimos a algún software o página que implique código el cual necesitemos hacerlo con un grupo de personas.
+        </p>
+    </section>
+    <section class="git-flow">
+        <h4>Git-Flow</h4>
+        <p>
+            Git Flow es una metodología de trabajo basada en Git, creada por Vincent Driessen. Dicha metodología de trabajo, define un modelo de ramificación estricto, diseñado alrededor del proyecto.
+            Git Flow es ideal para proyectos que tienen un ciclo de lanzamiento programado. Esta metodología de trabajo no agrega ningún concepto o comando nuevo más allá de los que se utilizan comúnmente cuando trabajas con Git (status, add, commit, checkout, merge, pull y push). Lo que sí hace, es asignar roles muy específicos a diferentes ramas y define cómo y cuándo deben interactuar.  
+        </p>
+        <div class="git-flow-explication">
+            <img src="img/descarga.jpeg" alt="">
+            <div>
+                <h5>Master y Dev</h5>
+                <p>El la rama master se almacena información del historial de lanzamiento oficial , osea el código que esta en producción.
+                    La rama dev es utilizada como una rama de integración de características.</p>
+                <h5>Feature</h5>
+                <p>La rama feature es utilizada para añadir nuevas características a tu proyecto, esta rama dependerá de la rama dev y se creará una por cada característica que se quiera incorporar al proyecto.
+                </p>
+                <h5>Hotfix</h5>
+                <p>La rama hotfix sirve para corregir errores que se hayan encontrado en el código (ya sean errores de rendimiento o de seguridad ) y que no pueden esperar a una nueva versión para ser arreglados.</p>
+                <h5>Release</h5>
+                <p>La rama release es usada para preparar todo para el lanzamiento de una nueva versión para tu proyecto, o dicho de otra forma, donde incorporarás todas las características de las ramas feature y las terminarás de testear antes de sacarlas a producción.</p>
+            </div>
+        </div>
+    </section>
+    <section class="proyecto">
+        <h4>Proyecto</h4>
+        <h5>Explicación</h5>
+        <p>El proyecto actúa de forma que nos pide un cliente que es encargado de realizar formaciones de empresas un curso de para poder enseñar javascript aplicado a intereaaciones con elementos HTML.</p>
+        <p>Para ello nos ha pedido que implementemos una pequeña página web en la que mostremos alfgunos ejemplos</p>
+        <h5>Usuarios</h5>
+        <p>El proyecto se ha divido en 3 usuarios:</p>
+        <ul>
+            <li>Usuario1</li>
+            <li>Usuario2</li>
+            <li>Usuario3</li>
+        </ul>
+        <p>El usuario 1 que es el más experimentado, se encargará de crear el repositorio del proyecto e implementará la estructura inicial de la página en la que incluirá la cabecera, la barra de navegación con el acceso a Home y el footer de la página. En la parte central del home incluirá una breve descripción del curso.</p>
+        <p>El usuario 2 creará la sección de “Modificar contenido HTML” en el que incluirá  algún ejemplo similar al que existe en el siguiente enlace así como una explicación de dicho código. También desarrollará la sección “Modificar atributos HTML”</p>  
+        <p>El usuario 3 que acaba de llegar a la  empresa implementará la sección “Modificar estilos CSS” de la misma forma que ha hecho el usuario 2. Añadirá ejemplos similares a este (comentando el código).</p>
+        
+    </section>
+    <section class="procedimiento">
+        <h5>Procedimiento</h5>
+        <h5>Inicio</h5>
+        <table>
+            <tr>
+                <td>
+                    <p>El usuario 1 al ser el más experimentado será el encargado de crear el repositorio y adecuarlo para poder utilizar la metodología git-flow</p>
+                </td>
+                <td>
+                    <img src="img/1.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Una vez inicializado la estructura inicial del proyecto procedemos a crear el repositorio</p>
+                </td>
+                <td>
+                    <img src="img/2.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Luego creamos el repositorio en github y subimos los cambios</p>
+                </td>
+                <td>
+                    <img src="img/3.png" alt="">
+                </td>
+            </tr>
+        </table>
+        <h5>Huksy</h5>
+        <p>Además, el usuario 1 que quiere que todo funcione correctamente, creará dos hooks (utilizando la librería husky) para el proyecto:</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Instalación librería husky</p>
+                </td>
+                <td>
+                    <img src="img/4.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>El primero comprobará que siempre que se realice un commit en la rama hotfix exista una persona asignada para verificar que no se rompe nada. Para ello, deberá comprobar que el mensaje de commit contiene la frase “A corregir por: …”</p>
+                </td>
+                <td>
+                    <img src="img/5.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Resultado:</p>
+                </td>
+                <td>
+                    <img src="img/6.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>El segundo simplemente mostrará en consola un mensaje con un dibujo hecho con caracteres ascii una vez hagamos el checkout de una rama del proyecto. Podéis coger ejemplos de esta página.</p>
+                </td>
+                <td>
+                    <img src="img/7.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Resultado:</p>
+                </td>
+                <td>
+                    <img src="img/8.png" alt="">
+                </td>
+            </tr>
+        </table>
+        <h5>Features</h5>
+        <p>El usuario 2 creará la sección de “Modificar contenido HTML” en el que incluirá  algún ejemplo similar al que existe en el siguiente enlace así como una explicación de dicho código. También desarrollará la sección “Modificar atributos HTML”</p>
+        <p>Vamos a crear primero la feature/attributosHTML y luego crear la feature/contenidoHTML para que se incluyan los cambios la una de la otra</p>
+        <table>
+            <tr>
+                <td>
+                    <img src="img/9.png" alt="">
+                    <img src="img/10.png" alt="">
+                </td>
+            </tr>
+            <tr>
+               <td>Resultado</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="img/13.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="img/11.png" alt="">
+                    <img src="img/12.png" alt="">
+                </td>
+            </tr>
+            <tr>
+               <td>Resultado</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="img/14.png" alt="">
+                </td>
+            </tr>
+        </table>
+        <h5>Eslint</h5>
+        <p>Previo a realizar el commit, se verificará el correcto formato en los ficheros html. Para ello, se ejecutará el linter eslint utilizando el siguiente plugin (link)</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Procedemos a descargar el plugin</p>
+                </td>
+                <td>
+                    <img src="img/15.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Configuración:</p>
+                    <p>En el caso de estar mal el formato o este mal identado saltará el error</p>
+                </td>
+                <td>
+                    <img src="img/16.png" alt="">
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                        <p>Problema:</p>
+                        <p>Estuve realizando pruebas y resultó que el campo html/report-bad-indent solo admite los campos 0,1,2, “off” o “error”, esto me pasa por no leerme la documentación completa, una vez solucionado el error , seguimos.</p>
+                    </td>
+                </td>
+                <td>
+                    <img src="img/17.png" alt="">
+                </td>
+            </tr>
+        </table>
+        <h5>Final</h5>
+        <p>El usuario 3 *, crea una feature (feature/estilosCSS) asociada al cambio para añadir su sección. El usuario 3, además, crea una nueva release con todas las features que etiqueta como v1.0.</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Creamos una nueva feature:</p>
+                    <img src="img/18.png" alt="">
+                    <img src="img/19.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Resultado
+                 </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Le añadimos los estilos y volvemos a subir el proceso</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="img/20.png" alt="">
+                </td>
+            </tr>
+        </table>
+        <p>
+            El usuario 1 * que se encarga de las pruebas, decide mejorar un poco la sección del contenido creada por el usuario 2. Para ello, crea un hotfix (hotfix/mejorasV_1_0) que efectúa dicha mejora.
+        </p>
+        <table>
+            <tr>
+                <td>Creación rama:</td>
+                <td><img src="img/21.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>Una vez creada ,realizamos la mejora del contenido y le volvemos a hacer el merge a la rama dev, que subira lo cambios y mismo procedimiento para la rama master</td>
+                <td><img src="img/22.png" alt=""></td>
+            </tr>
+        </table>
+    </section>
 </body>
 </html>
