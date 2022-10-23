@@ -1,0 +1,13 @@
+body {
+    margin: 2.5% 2.5% 2.5% 2.5%;
+}
+
+header {
+    text-align: center;
+    background-color: gray;
+}
+
+.git-flow-explication img {
+    float: left;
+    width: 60%;
+}
